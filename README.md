@@ -1,8 +1,8 @@
 AlienWar
 ========
 
-Control program for AlienWar on codegolf.stackexchange.com (Post coming soon)
-http://meta.codegolf.stackexchange.com/a/1762/15080
+Control program for AlienWar (a king of the hill challenge) on codegolf.stackexchange.com.
+http://codegolf.stackexchange.com/questions/32782/survival-game-alienwar
 
 Alien-Template:
 ```
