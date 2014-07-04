@@ -21,35 +21,35 @@ public abstract class Specie {
 	public abstract boolean wantToFight(int[] enemyAbilities);
 	public abstract char getRepresentedChar();
 	
-	public int getLifeLvl() {
+	public final int getLifeLvl() {
 		return Math.round(life);
 	}
 	
-	public int getStrengthLvl() {
+	public final int getStrengthLvl() {
 		return Math.round(strength);
 	}
 	
-	public int getDefenseLvl() {
+	public final int getDefenseLvl() {
 		return Math.round(defense);
 	}
 	
-	public int getVisionLvl() {
+	public final int getVisionLvl() {
 		return Math.round(vision);
 	}
 	
-	public int getVisionFieldsCount() {
+	public final int getVisionFieldsCount() {
 		return Math.round(vision/2);
 	}
 	
-	public int getClevernessLvl() {
+	public final int getClevernessLvl() {
 		return Math.round(cleverness);
 	}
 	
-	public int getClevernessBlur() {
+	public final int getClevernessBlur() {
 		return Math.round(cleverness/2) + 1;
 	}
 	
-	public int getCurrentHp() {
+	public final int getCurrentHp() {
 		return Math.round(currentHp);
 	}
 	
