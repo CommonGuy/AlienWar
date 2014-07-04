@@ -5,7 +5,7 @@ Control program for AlienWar (a king of the hill challenge) on codegolf.stackexc
 http://codegolf.stackexchange.com/questions/32782/survival-game-alienwar
 
 Alien-Template:
-```
+```java
 package alien;
 
 import planet.Move;
