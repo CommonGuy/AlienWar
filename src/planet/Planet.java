@@ -13,7 +13,7 @@ import prey.*;
 import alien.*;
 
 public class Planet {
-    private static final Class[] species = {AimlessWanderer.class, BananaPeel.class, Bender.class, BlindBully.class, BullyAlien.class, CleverAlien.class, Coward.class, CropCircleAlien.class, Fleer.class, Gamer.class, Guard.class, Hunter.class, Junkie.class, Manager.class, Morphling.class, NewGuy.class, OkinawaLife.class, Rock.class, Rogue.class, SecretWeapon.class, SecretWeapon2.class, SecretWeapon3.class, Survivor.class, Warrior.class, WeakestLink.class, Whale.class, Cow.class, Turtle.class, Eagle.class, Human.class};
+    private static final Class[] species = {AimlessWanderer.class, BananaPeel.class, Bender.class, BlindBully.class, BullyAlien.class, ChooseYourBattles.class, CleverAlien.class, CorporateAlien.class, Coward.class, CropCircleAlien.class, Fleer.class, Gamer.class, GentleGiant.class, Geoffrey.class, Guard.class, Hunter.class, Junkie.class, Manager.class, Morphling.class, NewGuy.class, OkinawaLife.class, PredicatClaw.class, PredicatEyes.class, Predicoward.class, Randomite.class, Rock.class, Rogue.class, SecretWeapon.class, SecretWeapon2.class, SecretWeapon3.class, Stone.class, Survivor.class, VanPelt.class, Warrior.class, WeakestLink.class, Whale.class, Cow.class, Turtle.class, Eagle.class, Human.class};
     private static final int SIZE = (int)Math.ceil(Math.sqrt(species.length * 100 * 2.5)); // 0 inclusive, SIZE exclusive
 	private static final int ROUND_COUNT = 1000;
 	private static final int SPECIE_COUNT = 100;
