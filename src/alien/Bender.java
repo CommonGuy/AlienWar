@@ -30,10 +30,10 @@ public class Bender extends Alien {
     }};
 
     public void setAbilityPoints(float[] abilities) {
-        abilities[LIF] = 2.5f;
-        abilities[STR] = 7;
+        abilities[LIF] = 2.5f; // Shiny metal ass
+        abilities[STR] = 7;    // Bending strength
         abilities[DEF] = 0;
-        abilities[VIS] = 0.5f;
+        abilities[VIS] = 0.5f; // Binocular eyes
         abilities[CLV] = 0;
     }
 
@@ -76,8 +76,8 @@ public class Bender extends Alien {
                 // ...otherwise, divide its score between its
                 //    available moves...
                 else {
-                    for (int i = x - 1; i < x + 1; x++) {
-                        for (int j = y - 1; j < y + 1; y++) {
+                    for (int i = x - 1; i < x + 1; i++) {
+                        for (int j = y - 1; j < y + 1; j++) {
                             scoringMap[i][j] += desirability / 9.;
                         }
                     }
@@ -92,11 +92,13 @@ public class Bender extends Alien {
 
         // Evaluate immediate surroundings 8^|
         //
-        // + + + + +
-        // + # # # +
-        // + # B # +
-        // + # # # +
-        // + + + + +
+        // +-----------+
+        // |           |
+        // |   # # #   |
+        // |   # B #   |
+        // |   # # #   |
+        // |           |
+        // +-----------+
         float bestScore = -10;
         int[] bestXY = new int[2];
         for (int x = vision - 1; x < vision + 1; x++) {
@@ -136,31 +138,37 @@ public class Bender extends Alien {
         float westScore = 0, southScore = 0, southWestScore = 0;
         for (int x = 0; x < vision; x++) {
             for (int y = vision - 1; y < vision + 1; y++) {
-                // + + + + +
-                // # # # + +
-                // # # B + +
-                // # # # + +
-                // + + + + +
+                // +-----------+
+                // |           |
+                // | # # #     |
+                // | # # B     |
+                // | # # #     |
+                // |           |
+                // +-----------+
                 westScore += scoringMap[x][y] / (vision - x);
             }
         }
         for (int x = vision - 1; x < vision + 1; x++) {
             for (int y = vision; y < fields.length; y++) {
-                // + + + + +
-                // + + + + +
-                // + # B # +
-                // + # # # +
-                // + # # # +
+                // +-----------+
+                // |           |
+                // |           |
+                // |   # B #   |
+                // |   # # #   |
+                // |   # # #   |
+                // +-----------+
                 southScore += scoringMap[x][y] / (y - vision);
             }
         }
         for (int x = 0; x < vision; x++) {
             for (int y = vision; y < fields.length; y++) {
-                // + + + + +
-                // + + + + +
-                // # # B + +
-                // # # # + +
-                // # # # + +
+                // +-----------+
+                // |           |
+                // |           |
+                // | # # B     |
+                // | # # #     |
+                // | # # #     |
+                // +-----------+
                 southWestScore += scoringMap[x][y] / Math.sqrt((y - vision) + (vision - x));
             }
         }
