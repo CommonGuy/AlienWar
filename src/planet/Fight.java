@@ -14,10 +14,14 @@ public class Fight {
 	}
 	
 	public boolean bothWantPeace() {
-		boolean wantFightOne = one.wantToFight(getBlurredAbilities(two));
-		boolean wantFightTwo = two.wantToFight(getBlurredAbilities(one));
-		
-		return !wantFightOne && !wantFightTwo;
+		try {
+			boolean wantFightOne = one.wantToFight(getBlurredAbilities(two));
+			boolean wantFightTwo = two.wantToFight(getBlurredAbilities(one));
+			
+			return !wantFightOne && !wantFightTwo;
+		} catch (Exception e) {
+			return false; //always fight if one alien has an error
+		}
 	}
 	
 	public void start() {		

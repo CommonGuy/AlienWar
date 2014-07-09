@@ -76,8 +76,8 @@ public class Bender extends Alien {
                 // ...otherwise, divide its score between its
                 //    available moves...
                 else {
-                    for (int i = x - 1; i < x + 1; x++) {
-                        for (int j = y - 1; j < y + 1; y++) {
+                    for (int i = x - 1; i < x + 1; i++) {
+                        for (int j = y - 1; j < y + 1; j++) {
                             scoringMap[i][j] += desirability / 9.;
                         }
                     }
