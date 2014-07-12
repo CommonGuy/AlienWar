@@ -22,6 +22,7 @@ public class Stats {
 		for (Specie specie : species) {
 			list.put(specie.getClass(), list.get(specie.getClass()) + specie.getAbilitiySum());
 		}
+		list = MapUtil.sortByValue(list);
 		for (Entry<Class, Integer> entry : list.entrySet()) {
 			System.out.println(entry.getValue() + "\t" + entry.getKey().getName());		
 		}
