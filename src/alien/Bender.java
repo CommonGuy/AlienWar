@@ -13,7 +13,7 @@ import java.util.HashMap;
 public class Bender extends Alien {
 
     private final int LIF = 0, STR = 1, DEF = 2, VIS = 3, CLV = 4;
-    private static final HashMap<Character, Integer> preyDesirability = new HashMap<Character, Integer>() {{
+    protected static HashMap<Character, Integer> preyDesirability = new HashMap<Character, Integer>() {{
         put('A', -9);
         put('W',  5);
         put('C',  0); // Originally -2, but Cows don't attack
@@ -31,9 +31,9 @@ public class Bender extends Alien {
 
     public void setAbilityPoints(float[] abilities) {
         abilities[LIF] = 2.5f; // Shiny metal ass
-        abilities[STR] = 7;    // Bending strength
+        abilities[STR] = 7.5f; // Bending strength
         abilities[DEF] = 0;
-        abilities[VIS] = 0.5f; // Binocular eyes
+        abilities[VIS] = 0;    // Binocular eyes
         abilities[CLV] = 0;
     }
 
