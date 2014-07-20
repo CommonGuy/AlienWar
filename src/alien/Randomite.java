@@ -8,7 +8,7 @@ public class Randomite extends Alien {
 
     @Override
     public void setAbilityPoints(float[] abilities) {
-    	int r1;
+        int r1;
         while (max > 0) {
             if (max == 1) {
                 r1 = 1;

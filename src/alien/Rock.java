@@ -4,8 +4,8 @@ import planet.Move;
 
 public class Rock extends Alien{
     public void setAbilityPoints(float[] abilities){
-        abilities[0] = 1;
-        abilities[1] = 9;
+        abilities[0] = 0.5f;
+        abilities[1] = 9.5f;
     }
 
     public Move move(char[][] fields){

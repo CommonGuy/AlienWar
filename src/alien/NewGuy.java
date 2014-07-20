@@ -42,7 +42,9 @@ public class NewGuy extends Alien {
         } else if (isEagle(enemyAbilities)) {
             return true;
         } else if (isHuman(enemyAbilities)) {
-            return true;
+            if (enemyAbilities[STR] < 3) {
+                return true;
+            }
         }
 
         return false;

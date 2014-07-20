@@ -21,7 +21,7 @@ public class Predicoward extends Alien {
         - - - - - - - - - - - - -
         - - - - - - - - - - - - -
 
-        Risk score = sum of manhattan distances of all aliens within vision range
+        Risk score = sum of weighted distances of all aliens within vision range
     */
     @Override
     public void setAbilityPoints( float[] abilities ) {
@@ -41,6 +41,7 @@ public class Predicoward extends Alien {
         //generate alien list
         for (int x=0; x<=vision*2; x++) {
             for(int y=0; y<=vision*2; y++){
+                if(x==vision && y==vision) continue;
                 if(fields[x][y]=='A'){
                     aliens.add(new Point(x,y));
                 }
@@ -71,8 +72,23 @@ public class Predicoward extends Alien {
         return false;
     }
 
-    //Return Manhattan Distance
+    //Return weighted distance (more weight for near opponents)
     private int getDistance(int x, int y, Point to){
-        return Math.abs(x-(int)to.getX())+Math.abs(y-(int)to.getY());
+        int xDist = Math.abs(x-(int)to.getX());
+        int yDist = Math.abs(y-(int)to.getY());
+        int numberOfMovesAway = Math.max(xDist, yDist);
+
+        if(numberOfMovesAway==0){
+            return 1000;
+        }
+        else if(numberOfMovesAway==1){
+            return 100;
+        }
+        else if(numberOfMovesAway==2){
+            return 25;
+        }
+        else{
+            return 6-numberOfMovesAway;
+        }
     }
 }

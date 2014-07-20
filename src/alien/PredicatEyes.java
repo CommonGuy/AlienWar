@@ -5,13 +5,13 @@ import planet.Move;
 /* Predict + Cat = Predicat! */
 public class PredicatEyes extends Alien {
     private static final int LIF=0, STR=1, DEF=2, VIS=3;
-    private static final int WHALE=6, COW=5, TURTLE=4, EAGLE=3, HUMAN=2, ALIEN=1, NONE=0;
+    private static final int WHALE=6, COW=1, TURTLE=4, EAGLE=3, HUMAN=2, ALIEN=-1, NONE=0;
 
     @Override
     public void setAbilityPoints( float[] abilities ) {
         abilities[LIF] = 4.5f;
-        abilities[STR] = 5f;
-        abilities[VIS] = 0.5f;
+        abilities[STR] = 4.5f;
+        abilities[VIS] = 1;
     }
 
     @Override

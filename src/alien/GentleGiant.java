@@ -5,8 +5,8 @@ import planet.Move;
 public class GentleGiant extends Alien {
 
     public void setAbilityPoints(float[] abilities) {
-        abilities[0] = 4; //life
-        abilities[1] = 5; //strength
+        abilities[0] = 3.5f; //life
+        abilities[1] = 5.5f; //strength
         abilities[2] = 0; //defense
         abilities[3] = 1; //vision
         abilities[4] = 0; //cleverness

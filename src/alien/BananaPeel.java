@@ -1,11 +1,10 @@
 package alien;
 
 import planet.Move;
-
 public class BananaPeel extends Alien{
     public void setAbilityPoints(float[] abilities){
-        abilities[0] = 1;  // banana peels barely hold themselves together
-        abilities[1] = 9;  // banana peels can't help tripping people up
+        abilities[0] = 0.5f;  // banana peels barely hold themselves together
+        abilities[1] = 9.5f;  // banana peels can't help tripping people up
         abilities[2] = 0;  // banana peels can't defend themselves
         abilities[3] = 0;  // banana peels can't see
         abilities[4] = 0;  // banana peels can't think
@@ -16,6 +15,6 @@ public class BananaPeel extends Alien{
     }
 
     public boolean wantToFight(int[] enemyAbilities){
-        return enemyAbilities[0] >= 100;
+        return enemyAbilities[0] == 0 || enemyAbilities[1] == 0;
     }
 }

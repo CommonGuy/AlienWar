@@ -6,8 +6,8 @@ public class Coward extends Alien{
     public void setAbilityPoints(float[] abilities){
         abilities[0] = 1;  // life
         abilities[1] = 0;  // str
-        abilities[2] = 7; // def
-        abilities[3] = 2;  // vis
+        abilities[2] = 2; // def
+        abilities[3] = 7;  // vis
         abilities[4] = 0;  // clv
     }
 

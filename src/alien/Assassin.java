@@ -29,12 +29,11 @@ public class Assassin extends Alien {
                 return Move.NORTH;
             }
         } 
-        
         return Move.getRandom();
     }
 
     public boolean wantToFight(int[] enemyAbilities) {
-        return enemyAbilities[2] >= 10 || enemyAbilities[4] >= 10 || enemyAbilities[0] >= 10;
+        return enemyAbilities[2] >= 10 || enemyAbilities[0] >= 10;
     }
 
 }

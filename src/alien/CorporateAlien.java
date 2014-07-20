@@ -7,8 +7,8 @@ public class CorporateAlien extends Alien {
     float[] abilities = new float[5];
 
     public void setAbilityPoints(float[] abilities) {
-        abilities[0] = 4; // life
-        abilities[1] = 6; // strength
+        abilities[0] = 4.5f; // life
+        abilities[1] = 5.5f; // strength
         abilities[2] = 0; // defense
         abilities[3] = 0; // vision
         abilities[4] = 0; // cleverness

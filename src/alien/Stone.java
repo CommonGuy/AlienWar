@@ -12,7 +12,7 @@ public class Stone extends Alien{
     }
 
     public Move move(char[][] fields){
-        return Move.getRandom(); // Stones don't know where they are going
+        return Move.SOUTH; // Stones just fall down
     }
 
     public boolean wantToFight(int[] enemyAbilities){

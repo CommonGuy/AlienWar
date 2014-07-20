@@ -5,7 +5,7 @@ import planet.Move;
 /* Predict + Cat = Predicat! */
 public class PredicatClaw extends Alien {
     private static final int LIF=0, STR=1, DEF=2;
-    private static final int WHALE=6, COW=5, TURTLE=4, EAGLE=3, HUMAN=2, ALIEN=1, NONE=0;
+    private static final int WHALE=6, COW=1, TURTLE=4, EAGLE=3, HUMAN=2, ALIEN=-1, NONE=0;
 
     @Override
     public void setAbilityPoints( float[] abilities ) {
@@ -15,6 +15,7 @@ public class PredicatClaw extends Alien {
 
     @Override
     public Move move( char[][] fields ) {
+
         /* Some credits to Eagle for letting me learn how to do the moves */
         int vision = getVisionFieldsCount(); //count of fields / middle
         int fieldX;
@@ -27,7 +28,11 @@ public class PredicatClaw extends Alien {
             fieldY = vision + move.getYOffset();
             switch(fields[fieldX][fieldY]){
             case 'W' : 
-                return move;
+                if(bestScore<WHALE){
+                    bestMove=move;
+                    bestScore=WHALE;
+                }
+                break;
             case 'C' :
                 if(bestScore<COW){
                     bestMove=move;
@@ -177,7 +182,7 @@ public class PredicatClaw extends Alien {
             return Move.WEST;
         }
         else{
-            return Move.getRandom();
+            return Move.WEST;
         }
 
     }

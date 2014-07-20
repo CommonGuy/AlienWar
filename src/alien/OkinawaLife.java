@@ -2,9 +2,12 @@ package alien;
 
 import planet.Move;
 
+
 public class OkinawaLife extends Alien{
     public void setAbilityPoints(float[] abilities){
-        abilities[0] = 10;
+        abilities[0] = 8.5f;
+        abilities[1] = 0.5f;
+        abilities[3] = 1;
     }
 
     public Move move(char[][] fields){
